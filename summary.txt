@@ -1,0 +1,8 @@
+Date: 05/01/25
+Author: Anthony Madrigal Murillo
+
+Summary: This project will be a fun arcade-style monster battler game build in java. It is a
+monster battling game with live minigames for combat. So far I have made a basic framework that 
+handles monster instance creation, damage calculation, and the start of a battle sequence. Next, I 
+will start working to incorporate live minigames so the game can be playable in a basic but cohesive 
+sense. I plan to add levels and a leaderboard in the future as well. 
