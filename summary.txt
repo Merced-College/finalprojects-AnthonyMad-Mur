@@ -1,8 +1,9 @@
 Date: 05/01/25
 Author: Anthony Madrigal Murillo
 
-Summary: This project will be a fun arcade-style monster battler game build in java. It is a
-monster battling game with live minigames for combat. So far I have made a basic framework that 
-handles monster instance creation, damage calculation, and the start of a battle sequence. Next, I 
-will start working to incorporate live minigames so the game can be playable in a basic but cohesive 
-sense. I plan to add levels and a leaderboard in the future as well. 
+Summary: This project will be a fun arcade-style shooter game built in java. It is
+similar to a Galaga shooter in which the player is at the bottom of the screen and must
+avoid obstacles while shooting an enemy to earn as much points as possible. So far I have made a basic 
+framework that allows for player movement and incoming obstacles. Next, I will start working to 
+incorporate object collisions and shooting so the game is playable. I plan to add a leaderboard in the
+and more obstacles in the future as well. 

@@ -6,7 +6,11 @@ Report:
     This program is my final programming project for the class CPSC-39 for Merced College. My program
     is am arcade shooting game with simple graphics but it runs at 60 frames a second and has a lot of 
     action! It is similar to a Galaga shooter in which the player is at the bottom of the screen and must
-    avoid obstacles while shooting an enemy to earn as much points as possible. 
+    avoid obstacles while shooting an enemy to earn as much points as possible. Obstacles fall from the top 
+    of the screen. The enemy moves left and right in a predictable pattern but the obstacles speed up and
+    slow down as time goes on. Once the player accumulates 80 points a danger will appear which the player 
+    must avoid. The player can only shoot in a straight line above themselves. A leader board holds 
+    the top 6 scores.
 
     Algorithm Explanations:
     The three algorithms I wrote for this program are the algorithms for the leaderboard, bullet shooting,
