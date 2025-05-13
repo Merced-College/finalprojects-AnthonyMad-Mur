@@ -48,7 +48,7 @@ public class FinalProject extends JPanel implements ActionListener, KeyListener 
 	private int playerHealth = 40;
 	
 	//file name for leaderboard text file
-	private String filename = "NewLeaderBoard.txt";
+	private final String filename = "NewLeaderBoard.txt";
 	
 	//trackers for recent hits
 	private int hitFrames = 0; // Tracks how long ago the player was hit
