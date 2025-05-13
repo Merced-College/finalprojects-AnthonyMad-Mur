@@ -1,0 +1,94 @@
+Date: 05/12/25
+Author: Anthony Madrigal Murillo
+
+Report:
+    Intro:
+    This program is my final programming project for the class CPSC-39 for Merced College. My program
+    is am arcade shooting game with simple graphics but it runs at 60 frames a second and has a lot of 
+    action! It is similar to a Galaga shooter in which the player is at the bottom of the screen and must
+    avoid obstacles while shooting an enemy to earn as much points as possible. 
+
+    Algorithm Explanations:
+    The three algorithms I wrote for this program are the algorithms for the leaderboard, bullet shooting,
+    and collision detection.
+    * LeaderBoard Algorithm:
+    * 0.Create a text file to host the leaderboard
+    * 1.After game over happens, create a linked list with the top 6 scores for easy sorting
+    * 2.Check leaderboard file to see the all time top 6 scores
+    * 3.Place current score in order into the linked list 
+    * 4.Remove the lowest score to only keep the true top 6 scores
+    * 5.Print updated top 6 to screen
+    Big O Time Discussion: This use of linked list turned out to be less optimal than I hoped 
+    because I ended up using Java's native implementation of indexes in linked list. So my insertion
+    of a new score has O(n) time because runs through all the indexes to see where it belongs.
+
+    * Collision Detection Algorithm:
+    * 0.Determine whether obstacle is touching the player using their x and y cordinates.
+    * 1.Check if the players X/Y cordinates are in the area taken up by the obstacle 
+    * 2.Player takes one damage per frame in collision
+    * 3.Player turns yellow to signify damage taken within the last half a second
+    * 4.If player health reaches zero then the player turns black to hide the character
+    * 5.Game over screen appears with leaderboard
+    Big O Time Discussion: All the code in this algorithm happens in O(1) however it is not that
+    efficient because it makes many processes run during every frame of the game which is not a concern
+    for a small game like this but it can be a problem if working with very limited memory. 
+
+    * Bullet shooting algorithm:
+    * 0. Create bullet asset
+    * 1. Create bullet square to be reused
+    * 2. Have bullet asset be set to black to blend into background at start
+    * 3. Have bullet position always be at the front of the player so it can instantly shoot from players position
+    * 4. Have bullet travel up the screen
+    * 5. Have the bullet check for collisions with enemy
+    * 6. Grant points if collided with enemy
+    * 7. Return to in front of player if the bullet reaches the top of the screen.
+    Big O Time Discussion: Once again this code all occurs in O(1) but is slightly inefficient because
+    the bullet constantly follows the player every frame which could possibly have been avoided by
+    instead adding the bullet in front of the player once the shoot button is pressed.
+    
+    Use of Data Structures:
+    I had a hard time adding some of the advanced data structures because I spent a lot of time
+    figuring out how to draw shapes in the graphical window but I did manage to get three data structures
+    in my code. 
+    Linked List: The first was the linked list used to sort and update my leaderboard. I saw that linked
+    lists had an insertion time of O(1) and after learning how they are built I thought they would be 
+    the best for a leaderboard and its implementation came out pretty well. 
+    Queue: The second data strucutre I used is a queue. I used a queue to make the enemy go through a 
+    queue of colors in the order of a rainbow. This queue keeps adding the colors of the rainbow whenever
+    the queue becomes empty from running through every color of the rainbow. The use of this queue
+    is completely O(1) because it only inserts and deletes colors into the queue which is great use for it. 
+    Stack:The third data structure I used is a stack. I again used it with Colors but this time I used 
+    it to change the color of the bullet as it is fired. Again I chose to use rainbow colors but I made
+    sure to take note of the stack data structures design by adding the colors in reverse order. This
+    use of a stack is completely O(1) because it is only inserting and deleting colors into the stack.
+
+    Biggest opportunity/Excitment:
+    I was very excited when I learned how to make simple graphics work with keyboard input because it
+    opened the door wide open to so many arcade game ideas that I love and want to see come to life. 
+    This ended up being a slight problem because I spent hours on making the game more fun to play 
+    so much so that I was struggling near the deadline to implement all of the data structures and 
+    techniques we learned this semester. I ended up deciding that once the game was fun and challenging 
+    enough to be worth trying to get a high score in, that I should switch my attention to making 
+    sure I used enough advanced data structures within my code. 
+
+    Biggest Error:
+    A major error I ran into while making the game was that I kept making new shapes but they would 
+    often be influenced by the players movement in a way they shouldn't have. For example, the bullets 
+    would follow the players movement instead of contining on their own fired path. The solution was 
+    simply to ensure that the bullet only followed the player when it was not being fired at the enemy.
+
+    Future Updates:
+    In the next version of my game I would definitely make the game more engaging by adding things like 
+    power-ups, additional obstacles, and new shooting mechanics.
+    
+Sources & Citing:
+Code Taken from:
+-Microsoft CoPilot
+-5/12/25
+-CoPilot AI LLM Chatbot
+-https://copilot.microsoft.com/
+
+-Merced College
+-5/12/25
+-Professor Hogan's CPSC 06 Week 15 Extra Credit Assignment
+https://mccd.instructure.com/courses/35650/assignments/1335013?module_item_id=3529542
